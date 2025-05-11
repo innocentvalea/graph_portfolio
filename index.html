@@ -11,7 +11,7 @@
       --light: #f1f5f9;
       --dark: #023047;
       --body: #333;
-      --max-width: 900px;
+      --max-width: 960px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,10 +20,11 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--body);
       line-height: 1.6;
-      background: #fff;
+      background: #e6f7ff; /* light blue background */
       scroll-behavior: smooth;
     }
 
+    /* ----- Global Layout ----- */
     header { background: var(--primary); color: #fff; padding: 1rem 0; }
     header h1 { text-align: center; margin-bottom: 0.5rem; font-size: 2rem; }
     header nav ul { display: flex; justify-content: center; gap: 1rem; list-style: none; }
@@ -33,23 +34,44 @@
     section { padding: 2rem 1rem; max-width: var(--max-width); margin: auto; }
     section h2 { color: var(--primary); margin-bottom: 1rem; }
 
-    #about-me p, #about-course p { margin-bottom: 1rem; }
-    #about-me { display: flex; flex-direction: column; align-items: flex-start; }
-    #about-me img.profile { width: 180px; max-width: 40%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); margin-bottom: 1rem; }
-
-    dl { margin-bottom: 1rem; }
-    dt { font-weight: bold; color: var(--dark); }
-    dd { margin-left: 1rem; margin-bottom: 0.5rem; }
-
-    #submissions ul { list-style: square; padding-left: 1.5rem; }
-    #submissions li { margin-bottom: 0.5rem; }
-
     footer { background: var(--dark); color: #fff; text-align: center; padding: 1rem; font-size: 0.9rem; }
 
+    /* ----- About Me ----- */
+    #about-me { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    #about-me img.profile { width: 180px; max-width: 40%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+    #about-me dl { margin-bottom: 1rem; }
+    #about-me dt { font-weight: bold; color: var(--dark); }
+    #about-me dd { margin-left: 1rem; margin-bottom: 0.5rem; }
+
     @media (min-width: 700px) {
-      #about-me { flex-direction: row; gap: 2rem; }
-      #about-me img.profile { margin-bottom: 0; }
+      #about-me { flex-direction: row; }
+      #about-me img.profile { margin: 0; }
     }
+
+    /* ----- Key Modules Grid ----- */
+    .modules {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .module-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-left: 4px solid var(--secondary);
+      padding: 1rem 1.25rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .module-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+    .module-card p { font-size: 0.9rem; line-height: 1.4; }
+
+    /* ----- Submissions ----- */
+    #submissions ul { list-style: square; padding-left: 1.5rem; }
+    #submissions li { margin-bottom: 0.5rem; }
   </style>
 </head>
 <body>
@@ -83,39 +105,53 @@
   <section id="about-course">
     <h2>About the Course</h2>
     <p><strong>Generative AI for Work &amp; Research Productivity</strong> is an 8-week live online certification that teaches no-code AI techniques to automate documents, data analysis, and research workflows.</p>
-    <ul>
 
-      
-    </ul>
-    <h3>Key Modules</h3>
-    <ol>
-      <li>Documents, Presentations &amp; Websites</li>
-      <li>Automated Data Analysis</li>
-      <li>GenAI for Research &amp; Text Analysis</li>
-      <li>Custom GPTs and Chatbots</li>
-      <li>AI Workflows for Task Automation</li>
-      <li>GenAI for Communication &amp; Outreach</li>
-      <li>Capstone Project &amp; Showcase</li>
-    </ol>
+    <h3 style="margin-top:2rem;">Key Modules</h3>
+    <div class="modules">
+      <div class="module-card">
+        <h3>1. Content &amp; Websites</h3>
+        <p>LLM fundamentals, no-code sites, AI presentations.</p>
+      </div>
+      <div class="module-card">
+        <h3>2. Automated Data Analysis</h3>
+        <p>Code Interpreter, Julius, Windsurf dashboards.</p>
+      </div>
+      <div class="module-card">
+        <h3>3. Research &amp; Text Analysis</h3>
+        <p>Literature search, summarisation, sentiment analysis.</p>
+      </div>
+      <div class="module-card">
+        <h3>4. Custom GPTs &amp; Chatbots</h3>
+        <p>RAG workflows, API integrations, Botpress.</p>
+      </div>
+      <div class="module-card">
+        <h3>5. AI Task Automation</h3>
+        <p>Lindy, Make.com, GSheets and Gmail automations.</p>
+      </div>
+      <div class="module-card">
+        <h3>6. Communication &amp; Outreach</h3>
+        <p>Ideogram visuals, marketing flows, video production.</p>
+      </div>
+    </div>
   </section>
 
   <section id="submissions">
     <h2>My Weekly Submissions</h2>
     <p>Links to deliverables will appear here as the course progresses.</p>
     <ul>
-      <li>Week&nbsp;1: <em>TBD</em></li>
-      <li>Week&nbsp;2: <em>TBD</em></li>
-      <li>Week&nbsp;3: <em>TBD</em></li>
-      <li>Week&nbsp;4: <em>TBD</em></li>
-      <li>Week&nbsp;5: <em>TBD</em></li>
-      <li>Week&nbsp;6: <em>TBD</em></li>
-      <li>Week&nbsp;7: <em>TBD</em></li>
-      <li>Week&nbsp;8: <em>TBD</em></li>
+      <li>Week 1: <em>TBD</em></li>
+      <li>Week 2: <em>TBD</em></li>
+      <li>Week 3: <em>TBD</em></li>
+      <li>Week 4: <em>TBD</em></li>
+      <li>Week 5: <em>TBD</em></li>
+      <li>Week 6: <em>TBD</em></li>
+      <li>Week 7: <em>TBD</em></li>
+      <li>Week 8: <em>TBD</em></li>
     </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 Innocent Valea &middot; Portfolio for "Generative&nbsp;AI&nbsp;for&nbsp;Work&nbsp;&amp;&nbsp;Research" Course</p>
+    <p>&copy; 2025 Innocent Valea • Portfolio for “Generative AI for Work &amp; Research” Course</p>
   </footer>
 </body>
 </html>
