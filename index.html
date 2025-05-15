@@ -6,8 +6,8 @@
   <title>Innocent Valea | Generative AI Portfolio</title>
   <style>
     :root {
-      --primary: #0077b6;
-      --secondary: #00b4d8;
+      --primary: #c2185b; /* pink accent */
+      --secondary: #e91e63; /* lighter pink */
       --light: #f1f5f9;
       --dark: #023047;
       --body: #333;
@@ -24,6 +24,9 @@
       scroll-behavior: smooth;
     }
 
+    /* Serif headings */
+    h1, h2, h3 { font-family: "Georgia", "Times New Roman", serif; }
+
     /* ----- Global Layout ----- */
     header { background: var(--primary); color: #fff; padding: 1rem 0; }
     header h1 { text-align: center; margin-bottom: 0.5rem; font-size: 2rem; }
@@ -38,7 +41,7 @@
 
     /* ----- About Me ----- */
     #about-me { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
-    #about-me img.profile { width: 180px; max-width: 40%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+    #about-me img.profile { width: 180px; max-width: 40%; border-radius: 50%; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
     #about-me dl { margin-bottom: 1rem; }
     #about-me dt { font-weight: bold; color: var(--dark); }
     #about-me dd { margin-left: 1rem; margin-bottom: 0.5rem; }
