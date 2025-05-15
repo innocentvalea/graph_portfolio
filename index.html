@@ -6,7 +6,7 @@
   <title>Innocent Valea | Generative AI Portfolio</title>
   <style>
     :root {
-      --primary: #c2185b; /* pink accent */
+      --primary: #c2185b; /* dark pink */
       --secondary: #e91e63; /* lighter pink */
       --light: #f1f5f9;
       --dark: #023047;
@@ -20,7 +20,7 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--body);
       line-height: 1.6;
-      background: #e6f7ff; /* light blue background */
+      background: #e6f7ff; /* light blue */
       scroll-behavior: smooth;
     }
 
@@ -45,6 +45,8 @@
     #about-me dl { margin-bottom: 1rem; }
     #about-me dt { font-weight: bold; color: var(--dark); }
     #about-me dd { margin-left: 1rem; margin-bottom: 0.5rem; }
+    .btn-download { display: inline-block; margin-top: 0.8rem; padding: 0.5rem 1rem; background: var(--primary); color: #fff; text-decoration: none; border-radius: 4px; font-size: 0.9rem; }
+    .btn-download:hover { background: var(--secondary); }
 
     @media (min-width: 700px) {
       #about-me { flex-direction: row; }
@@ -52,29 +54,16 @@
     }
 
     /* ----- Key Modules Grid ----- */
-    .modules {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-    .module-card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-left: 4px solid var(--secondary);
-      padding: 1rem 1.25rem;
-      border-radius: 6px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
-    .module-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-      color: var(--dark);
-    }
+    .modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .module-card { background: #fff; border: 1px solid #e5e7eb; border-left: 4px solid var(--secondary); padding: 1rem 1.25rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .module-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--dark); }
     .module-card p { font-size: 0.9rem; line-height: 1.4; }
 
     /* ----- Submissions ----- */
     #submissions ul { list-style: square; padding-left: 1.5rem; }
     #submissions li { margin-bottom: 0.5rem; }
+      .btn-download { display: inline-block; margin-top: 0.8rem; padding: 0.5rem 1rem; background: var(--primary); color: #fff; text-decoration: none; border-radius: 4px; font-size: 0.9rem; }
+    .btn-download:hover { background: var(--secondary); }
   </style>
 </head>
 <body>
@@ -102,6 +91,8 @@
         <dt>Focus Areas</dt>
         <dd>Malaria vaccine &amp; drug trials, maternal–child health, health-systems implementation.</dd>
       </dl>
+      <a class="btn-download" href="https://drive.google.com/file/d/1XgToFIywp6W8U-37uqu8A7QCSC_OE4_I/view?usp=sharing" target="_blank" rel="noopener">Download CV (PDF)</a>
+      <a class="btn-download" href="https://drive.google.com/file/d/1XgToFIywp6W8U-37uqu8A7QCSC_OE4_I/view?usp=sharing" target="_blank" rel="noopener" download>Download CV (PDF)</a>
     </div>
   </section>
 
