@@ -49,6 +49,9 @@
     .pending{border-left:4px solid var(--secondary)}
     .completed{border-left:4px solid var(--success)}
     .completed h4::after{content:" ✔";color:var(--success)}
+    /* Contact form iframe responsive */
+    .form-wrapper{max-width:640px;margin:auto}
+    .form-wrapper iframe{width:100%;border:none;height:780px}
   </style>
 </head>
 <body>
@@ -59,6 +62,7 @@
       <li><a href="#about-me" class="active">About Me</a></li>
       <li><a href="#about-course">About the Course</a></li>
       <li><a href="#submissions">Weekly Submissions</a></li>
+      <li><a href="#contact">Consultation</a></li>
     </ul>
   </nav>
 </header>
@@ -69,7 +73,7 @@
       <h2>About Me</h2>
       <p>Research Scientist specializing in Epidemiology and Clinical Research at the National Center for Research in Science &amp; Technology (CNRST) / Clinical Research Unit of Nanoro (CRUN) in Burkina Faso.</p>
       <dl>
-        <dt>Current Role</dt><dd>Principal Investigator and Co-Investigator on multiple malaria and infectious-disease trials.</dd>
+        <dt>Current Role</dt><dd>Principal Investigator and Co-Investigator on multiple malaria and infectious‑disease trials.</dd>
         <dt>Education</dt><dd>PhD in Medical Sciences, University of Antwerp (2013) plus certificates in GCP &amp; Quality Management.</dd>
         <dt>Focus Areas</dt><dd>Malaria vaccine &amp; drug trials, maternal–child health, implementation research.</dd>
       </dl>
@@ -78,10 +82,10 @@
   </section>
   <section id="about-course">
     <h2>About the Course</h2>
-    <p><strong>Generative AI for Work &amp; Research Productivity</strong> is an 8-week certification on no-code AI for documents, data and research workflows.</p>
+    <p><strong>Generative AI for Work &amp; Research Productivity</strong> is an 8‑week certification on no‑code AI for documents, data and research workflows.</p>
     <h3 style="margin-top:2rem;">Key Modules</h3>
     <div class="modules">
-      <div class="module-card"><h3>1. Content &amp; Websites</h3><p>LLM fundamentals, no-code sites, AI presentations.</p></div>
+      <div class="module-card"><h3>1. Content &amp; Websites</h3><p>LLM fundamentals, no‑code sites, AI presentations.</p></div>
       <div class="module-card"><h3>2. Automated Data Analysis</h3><p>Code Interpreter, Julius, Windsurf dashboards.</p></div>
       <div class="module-card"><h3>3. Research &amp; Text Analysis</h3><p>Literature search, summarisation, sentiment analysis.</p></div>
       <div class="module-card"><h3>4. Custom GPTs &amp; Chatbots</h3><p>RAG workflows, API integrations, Botpress.</p></div>
@@ -93,13 +97,21 @@
     <h2>My Weekly Submissions</h2>
     <div class="submissions-grid">
       <div class="submission-card completed"><h4>Week&nbsp;1</h4><p><a href="https://innocentvalea.github.io/graph_portfolio/" target="_blank" rel="noopener">Portfolio Website</a></p></div>
-      <div class="submission-card completed"><h4>Week&nbsp;2</h4><p><a href="https://innocentvalea.github.io/graph_portfolio/data_report.html" target="_blank" rel="noopener">CO2 &amp; GDP Analysis Report</a></p></div>
+      <div class="submission-card completed"><h4>Week&nbsp;2</h4><p><a href="https://innocentvalea.github.io/graph_portfolio/data_report.html" target="_blank" rel="noopener">CO₂ &amp; GDP Analysis Report</a></p></div>
       <div class="submission-card completed"><h4>Week&nbsp;3</h4><p><a href="job_analysis" target="_blank" rel="noopener">Job Analysis Notebook</a></p></div>
       <div class="submission-card pending"><h4>Week&nbsp;4</h4><p>Coming Soon</p></div>
       <div class="submission-card pending"><h4>Week&nbsp;5</h4><p>Coming Soon</p></div>
       <div class="submission-card pending"><h4>Week&nbsp;6</h4><p>Coming Soon</p></div>
       <div class="submission-card pending"><h4>Week&nbsp;7</h4><p>Coming Soon</p></div>
       <div class="submission-card pending"><h4>Week&nbsp;8</h4><p>Coming Soon</p></div>
+    </div>
+  </section>
+
+  <!-- Consultation Form -->
+  <section id="contact">
+    <h2>Contact for Consultation</h2>
+    <div class="form-wrapper">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0MfLQbrGUO13KHmIh__1AyXZkm8f42Oo9G95fZMOtjCm_Mg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
   </section>
 </main>
@@ -111,4 +123,3 @@
 <script src="https://files.bpcontent.cloud/2025/05/30/15/20250530154608-ZDSRE4R8.js"></script>
 </body>
 </html>
-
