@@ -116,8 +116,17 @@
   </section>
 </main>
 <footer>
-  <img src="https://hits.sh/innocentvalea.github.io/graph_portfolio/.svg?view=today-total" alt="Visitor counter badge" style="height:20px;" />
-  <p style="margin:0">&copy; 2025 Innocent Valea • Portfolio for “Generative AI for Work &amp; Research” Course</p>
+  <div id="counter-wrap"><span id="visits">--</span>&nbsp;visits</div>
+  <div>&copy; 2025 Innocent Valea • Portfolio for “Generative AI for Work &amp; Research” Course</div>
+  <script>
+    (function(){
+      const el = document.getElementById('visits');
+      fetch('https://api.countapi.xyz/update/innocentvalea-portfolio/main?amount=1')
+        .then(r=>r.json())
+        .then(d=>{el.textContent=d.value;})
+        .catch(()=>{el.textContent='N/A';});
+    })();
+  </script>
 </footer>
 <!-- Botpress Chatbot -->
 <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
